@@ -1,10 +1,11 @@
 @abstract class_name A_Asteroid extends RigidBody2D
 @export_range(0,500) var reward : int = 10 
 
-var on_dmg_tkn_signal : Signal
+#var on_dmg_tkn_signal : Signal
 
 func _ready() -> void:
 	body_entered.connect(damage_ship)
+	add_to_group("Enemies")
 	pass
 
 func damage_ship(other : RigidBody2D) -> void:
@@ -14,9 +15,9 @@ func damage_ship(other : RigidBody2D) -> void:
 
 	
 func take_dmg() -> void:
-	GameManager.score += 10
+	GameManager.score += reward
 	on_dmg_tkn()
-	on_dmg_tkn_signal.emit()
+	#on_dmg_tkn_signal.emit()
 	pass
 	
 	

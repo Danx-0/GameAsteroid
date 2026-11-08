@@ -18,10 +18,10 @@ func _ready() -> void:
 	pass 
 
 #Update
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	#fixed update
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	
 	if iFrames > 0:
 		contact_monitor = false
@@ -44,16 +44,21 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 
 
 func _take_dmg() -> void:
+	if iFrames > 0 : return #para que el codigo funcione bien, en ves de que me quite dos vidas con un solo choque, me quitara 1 por un choque 
+	#antes me quitaba dos vidas por choque sin if de arriba :b
 	hitPoints-=1
+	GameManager.lives =hitPoints
 	teleport(initPos)
 	linear_velocity = Vector2.ZERO
 	iFrames = 10
 	
 
 	#si ya no hay vidas, se destruye la nave
-	if hitPoints == 0:
+	if hitPoints <= 0:
 		queue_free()
 		print_debug("Ship Destroyed")
+		print("GAME OVER!:b")
+		get_tree().paused = true 
 
 	pass
 	
