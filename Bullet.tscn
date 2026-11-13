@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://dhy7cwe50334r"]
 
-[ext_resource type="Script" uid="uid://dwpw2j4c86adf" path="res://bullet.gd" id="1_4s4u5"]
 [ext_resource type="Texture2D" uid="uid://dak5uujsmyyak" path="res://Fried_egg,_sunny_side_up.png" id="2_4s4u5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ta373"]
-radius = 26.24881
+radius = 15.033297
 
 [node name="Bullet" type="RigidBody2D" unique_id=621432341]
 collision_layer = 2
@@ -12,7 +11,6 @@ collision_mask = 4
 gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 1
-script = ExtResource("1_4s4u5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=662281483]
 scale = Vector2(0.14963202, 0.14757644)

@@ -38,8 +38,8 @@ func on_dmg_tkn() -> void:
 	
 	var newAteroid1 = duplicate() as NormalAsteroid
 	var newAteroid2 = duplicate() as NormalAsteroid
-	get_parent().add_child.call_deferred(newAteroid1)
-	get_parent().add_child.call_deferred(newAteroid2)
+	get_parent().add_child(newAteroid1)
+	get_parent().add_child(newAteroid2)
 	
 	#get_parent().add_child(newAteroid2)
 	

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bslsxp8wwlvtn"]
+
+[ext_resource type="Script" uid="uid://cgdgryf6r7poi" path="res://piercing_bullet.gd" id="1_3wyre"]
+[ext_resource type="Texture2D" uid="uid://bmo2kokr8nelk" path="res://png-transparent-redbubble-polite-cat-meme-funny-cat-meme-thumbnail.png" id="2_s8ruv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3wyre"]
+
+[node name="PiercingBullet" type="RigidBody2D" unique_id=252468510]
+gravity_scale = 0.0
+script = ExtResource("1_3wyre")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=37977121]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_s8ruv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1086029314]
+shape = SubResource("CircleShape2D_3wyre")
