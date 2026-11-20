@@ -13,10 +13,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	ScoreDisplay.text = "Score: "+ str(GameManager.score)
-	LivesDisplay.text = "Lives: "+ str(GameManager.lives)
-	if GameManager.won == true:
+	ScoreDisplay.text = "Score: "+ str(Game_Manager.score)
+	LivesDisplay.text = "Lives: "+ str(Game_Manager.lives)
+	if Game_Manager.won == true:
 		WonDisplay.visible = true 
-	if GameManager.lives <= 0:
+	if Game_Manager.lives <= 0:
 		GameOverDisplay.visible = true
 	pass

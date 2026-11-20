@@ -1,18 +1,17 @@
 [gd_scene format=3 uid="uid://bx03n0cta7hwt"]
 
-[ext_resource type="Script" uid="uid://dvoo43cpflwr7" path="res://main_scene.gd" id="1_tphip"]
+[ext_resource type="Script" uid="uid://l8j06iap6tc2" path="res://Game Manager.gd" id="1_ec7p0"]
 [ext_resource type="PackedScene" uid="uid://b5655r4gpcoj1" path="res://Nave.tscn" id="2_7qccc"]
-[ext_resource type="PackedScene" uid="uid://bslsxp8wwlvtn" path="res://PiercingBullet.tscn" id="3_ec7p0"]
 [ext_resource type="Script" uid="uid://do4d7cdoy6crx" path="res://hard_asteroid.gd" id="4_ec7p0"]
 [ext_resource type="PackedScene" uid="uid://cq8i3i0shgvjj" path="res://Asteroid.tscn" id="4_yui23"]
 [ext_resource type="Script" uid="uid://c3ldpypptwr6l" path="res://UpdateUI.gd" id="5_yui23"]
+[ext_resource type="PackedScene" uid="uid://cfqxojduxxb8h" path="res://Power_Up/Power_Up.tscn" id="6_ec7p0"]
 
 [node name="Main" type="Node2D" unique_id=1761369529]
-script = ExtResource("1_tphip")
+script = ExtResource("1_ec7p0")
 
 [node name="Ship" parent="." unique_id=1707135784 instance=ExtResource("2_7qccc")]
 position = Vector2(602, 525.00006)
-bullet = ExtResource("3_ec7p0")
 
 [node name="Asteroid" parent="." unique_id=1443438254 instance=ExtResource("4_yui23")]
 position = Vector2(970, 102)
@@ -65,3 +64,9 @@ offset_right = 801.0
 offset_bottom = 418.0
 theme_override_font_sizes/font_size = 60
 text = "Game Over! :b"
+
+[node name="PowerUp" parent="." unique_id=753028873 instance=ExtResource("6_ec7p0")]
+position = Vector2(464, 365)
+
+[node name="PowerUp2" parent="." unique_id=1975916581 instance=ExtResource("6_ec7p0")]
+position = Vector2(642, 357)

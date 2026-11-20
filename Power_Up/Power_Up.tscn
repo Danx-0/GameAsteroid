@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cfqxojduxxb8h"]
+
+[ext_resource type="Script" uid="uid://cy051j2cifj16" path="res://Power_Up/piercing_bullet_pu.gd" id="1_6kc1l"]
+[ext_resource type="Texture2D" uid="uid://bmo2kokr8nelk" path="res://png-transparent-redbubble-polite-cat-meme-funny-cat-meme-thumbnail.png" id="1_oa8un"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cjdqc"]
+radius = 28.01785
+
+[node name="PowerUp" type="RigidBody2D" unique_id=753028873]
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_6kc1l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=480966807]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_oa8un")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=75959316]
+position = Vector2(-1, 7)
+shape = SubResource("CircleShape2D_cjdqc")

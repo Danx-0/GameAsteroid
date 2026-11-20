@@ -1,4 +1,4 @@
-class_name GameManager extends Node2D
+class_name Game_Manager extends Node2D
 static  var score: int = 0
 static var lives: int = 3
 static var won: bool = false 
