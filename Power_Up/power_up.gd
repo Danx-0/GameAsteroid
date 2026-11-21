@@ -1,10 +1,10 @@
-@abstract class_name APowerUp extends RigidBody2D
+@abstract class_name APowerUp extends RigidBody2D 
 @export_range(100,1000,10) var speed:float = 250
-
+##signal _on_grab
 var on_grab : Signal
 
 func _init() -> void:
-	
+	##on_grab = _on_grab
 	body_entered.connect(handle_grab)
 	
 	linear_velocity = Vector2.UP.rotated(randf() * 2 * PI) * speed

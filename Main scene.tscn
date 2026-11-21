@@ -14,17 +14,16 @@ script = ExtResource("1_ec7p0")
 position = Vector2(602, 525.00006)
 
 [node name="Asteroid" parent="." unique_id=1443438254 instance=ExtResource("4_yui23")]
-position = Vector2(970, 102)
+position = Vector2(888, 137)
 mass = 1000.0
-script = ExtResource("4_ec7p0")
 
 [node name="Asteroid2" parent="." unique_id=582548673 instance=ExtResource("4_yui23")]
-position = Vector2(180, 117)
+position = Vector2(372, 199)
 mass = 1000.0
 script = ExtResource("4_ec7p0")
 
 [node name="Asteroid3" parent="." unique_id=1507153879 instance=ExtResource("4_yui23")]
-position = Vector2(568, 221)
+position = Vector2(889, 258)
 mass = 1000.0
 
 [node name="UI" type="Node" parent="." unique_id=1655044969 node_paths=PackedStringArray("ScoreDisplay", "LivesDisplay", "GameOverDisplay", "WonDisplay")]
@@ -66,7 +65,7 @@ theme_override_font_sizes/font_size = 60
 text = "Game Over! :b"
 
 [node name="PowerUp" parent="." unique_id=753028873 instance=ExtResource("6_ec7p0")]
-position = Vector2(464, 365)
+position = Vector2(423, 398)
 
 [node name="PowerUp2" parent="." unique_id=1975916581 instance=ExtResource("6_ec7p0")]
 position = Vector2(642, 357)
